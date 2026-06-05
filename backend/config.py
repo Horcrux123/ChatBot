@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     ZOHO_REDIRECT_URI: str = Field(default="http://localhost:8000/auth/callback")
     ZOHO_ACCOUNTS_URL: str = Field(default="https://accounts.zoho.com")
     ZOHO_API_BASE: str = Field(default="https://projectsapi.zoho.com/restapi")
-    ANTHROPIC_API_KEY: str = Field(default="")
+    GEMINI_API_KEY: str = Field(default="")
     SECRET_KEY: str = Field(default="your-random-secret-for-sessions")
     DATABASE_URL: str = Field(default="sqlite+aiosqlite:///./zoho_chatbot.db")
     FRONTEND_URL: str = Field(default="http://localhost:5173")

@@ -82,7 +82,7 @@ Your application will automatically request the following scopes during the cons
 | `ZOHO_REDIRECT_URI` | `http://localhost:8000/auth/callback` | Redirect route pointing to local FastAPI server. |
 | `ZOHO_ACCOUNTS_URL` | `https://accounts.zoho.com` | Base Accounts domain (use `.eu`, `.in` or `.com.cn` depending on your region). |
 | `ZOHO_API_BASE` | `https://projectsapi.zoho.com/restapi` | API Base endpoint of Zoho Projects. |
-| `ANTHROPIC_API_KEY` | `sk-ant-api03-...` | Your Anthropic developer console API Key. |
+| `GEMINI_API_KEY` | `AIzaSy...` | Your Google Gemini developer API Key. |
 | `SECRET_KEY` | `32_character_random_string_for_security` | Key used to sign session cookies and encrypt stored Zoho tokens. |
 | `DATABASE_URL` | `sqlite+aiosqlite:///./zoho_chatbot.db` | Target SQLite database URI. |
 | `FRONTEND_URL` | `http://localhost:5173` | Home URL of Vite React server. |
@@ -106,7 +106,7 @@ python -m venv venv
 venv\Scripts\activate
 
 # Install required dependencies
-pip install fastapi uvicorn sqlalchemy aiosqlite httpx langgraph langchain langchain-anthropic cryptography itsdangerous pydantic-settings pydantic
+pip install fastapi uvicorn sqlalchemy aiosqlite httpx langgraph langchain langchain-google-genai cryptography itsdangerous pydantic-settings pydantic
 
 # Run the FastAPI server in development mode
 uvicorn main:app --reload --port 8000

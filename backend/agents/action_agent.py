@@ -4,7 +4,7 @@ import logging
 import re
 from typing import Dict, Any, Optional
 
-from langchain_anthropic import ChatAnthropic
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import AIMessage, SystemMessage, ToolMessage
 from langchain_core.runnables import RunnableConfig
 
@@ -89,9 +89,9 @@ async def action_agent_node(state: dict, config: RunnableConfig = None) -> dict:
         )
         
         # Let LLM summarize the outcome
-        llm = ChatAnthropic(
-            model="claude-3-5-sonnet-20241022",
-            anthropic_api_key=settings.ANTHROPIC_API_KEY,
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-1.5-flash",
+            google_api_key=settings.GEMINI_API_KEY,
             temperature=0.2
         )
         
@@ -134,9 +134,9 @@ async def action_agent_node(state: dict, config: RunnableConfig = None) -> dict:
     )
     
     try:
-        llm = ChatAnthropic(
-            model="claude-3-5-sonnet-20241022",
-            anthropic_api_key=settings.ANTHROPIC_API_KEY,
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-1.5-flash",
+            google_api_key=settings.GEMINI_API_KEY,
             temperature=0.0
         )
         
