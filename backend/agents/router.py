@@ -34,7 +34,7 @@ async def router_node(state: dict, config: dict = None) -> dict:
     try:
         # Initialize LLM with low temperature for routing consistency
         llm = ChatGoogleGenerativeAI(
-            model="gemini-1.5-flash",
+            model="gemini-3.5-flash",
             google_api_key=settings.GEMINI_API_KEY,
             temperature=0.0
         )
