@@ -71,9 +71,8 @@ Your application will automatically request the following scopes during the cons
 
 ## 🗂️ Environment Configuration
 
-1. Locate `.env.example` in the root folder.
-2. Duplicate the file and rename it to `.env`.
-3. Fill in the missing values as follows:
+1. Locate `.env` in the root folder.
+2. Fill in the missing values as follows:
 
 | Environment Variable | Example Value | Description |
 | :--- | :--- | :--- |
